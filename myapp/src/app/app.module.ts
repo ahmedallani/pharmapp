@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import {APP_BASE_HREF} from '@angular/common';
 import { LoginComponent } from './login/login.component';
+import { MemberComponent } from './member/member.component';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { LoginComponent } from './login/login.component';
     AppComponent,
     NavbarComponent,
     LoginComponent,
+    MemberComponent,
     
   ],
   imports: [
