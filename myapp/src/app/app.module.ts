@@ -11,7 +11,8 @@ import { MemberComponent } from './member/member.component';
 
 import { CustumerComponent } from './custumer/custumer.component';
 import {HttpClientModule} from '@angular/common/http';
-import {FormsModule} from '@angular/forms'
+import {FormsModule} from '@angular/forms';
+import { ProductComponent } from './components/product/product.component'
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {FormsModule} from '@angular/forms'
     NavbarComponent,
     LoginComponent,
     MemberComponent,
-        CustumerComponent
+        CustumerComponent,
+        ProductComponent
   ],
   imports: [
     BrowserModule,

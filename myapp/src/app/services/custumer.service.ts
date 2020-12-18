@@ -21,4 +21,9 @@ urlApi='http://localhost:8000/api/custumer'
   postitem(custumer:any){
    return this.http.post<MyInterface>(this.urlApi,custumer)
   }
+  //Methode Update
+  updateCustumer(custumers:any){
+    return this.http.put(`${this.urlApi}`,custumers)
+
+  }
 }
