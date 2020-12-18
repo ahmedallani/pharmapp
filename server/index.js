@@ -21,9 +21,15 @@ mongoose.connect(
   {
     useNewUrlParser: true,
     useUnifiedTopology: true
-  }
+  },
+  {useMongoClient: true}
 );
-
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*"); 
+  res.header("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE"); 
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 mongoose.connection
   .once("open", () => console.log("Connected to the database!"))
   .on("error", (err) => console.log("Error", err));
@@ -32,6 +38,7 @@ mongoose.connection
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+mongoose.set('useCreateIndex', true)
 
 app.use(
   session({
@@ -40,12 +47,12 @@ app.use(
     saveUninitialized: true
   })
 );
-app.use(
-  cors({
-    origin: "http://localhost:8000", //
-    credentials: true
-  })
-);
+// app.use(
+//   cors({
+//     origin: "http://localhost:8000", //
+//     credentials: true
+//   })
+// );
 
 app.use(cookieParser("secretcode"));
 // Passport middleware

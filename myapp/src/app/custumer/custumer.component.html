@@ -1,0 +1,70 @@
+<h1>Add Custumer </h1>
+<form>
+  <div class="form-group">
+    <label for="one1">id : </label>
+    <input [(ngModel)]="myCustumer.id" type="text" id="one1" name="id" placeholder="Enter id ... ">
+  
+  </div>
+<div class="form-group">
+  <label for="one">Name : </label>
+  <input [(ngModel)]="myCustumer.name" type="text" id="one" name="name" placeholder="Enter name ... ">
+
+</div>
+<div class="form-group">
+  <label for="two">Genre : </label>
+  <input [(ngModel)]="myCustumer.genre" type="text" id="two" name="name" placeholder="Enter  Genre ... ">
+
+</div>
+<div class="form-group">
+  <label for="three">Date   :   </label>
+  <input [(ngModel)]="myCustumer.date" type="date" id="three" name="date" placeholder="Enter the Date ... ">
+
+</div>
+<div class="form-group">
+  <label for="four">Phone : </label>
+  <input [(ngModel)]="myCustumer.phone" type='tel' id="four" name="phone" placeholder="Phone ... ">
+
+</div>
+<div class="form-group">
+  <label for="five">Email : </label>
+  <input [(ngModel)]="myCustumer.email" type="email" id="five" name="email" placeholder=" email ... ">
+
+</div>
+<div class="form-group">
+  <label for="six">Points : </label>
+  <input [(ngModel)]="myCustumer.points" type="Number" id="six" name="points" placeholder="points ... ">
+
+</div>
+<br />
+<button class='btn' (click)="postCustumer()" type="button">ADD Custumer</button>
+</form>
+<br />
+<table class='table table-success'>
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>name</th>
+      <th>Genre</th>
+      <th>Date</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Points</th>
+      <th></th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of myArray">
+      <td>{{item.id}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.genre}}</td>
+      <td>{{item.date}}</td>
+      <td>{{item.phone}}</td>
+      <td>{{item.email}}</td>
+      <td>{{item.points}}</td>
+       <td>
+         <button (click)="deleteCustumer(item._id)">delete</button>
+         </td>
+      <tr>
+  </tbody>
+</table>
