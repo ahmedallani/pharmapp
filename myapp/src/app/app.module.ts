@@ -21,16 +21,15 @@ import {FormsModule} from '@angular/forms'
     MemberComponent,
     
 
-    CustumerComponent
+ CustumerComponent
 
+        CustumerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
 
-  
-
-    HttpClientModule,
+      HttpClientModule,
     FormsModule
 
   ],
