@@ -19,14 +19,19 @@ import {FormsModule} from '@angular/forms'
     NavbarComponent,
     LoginComponent,
     MemberComponent,
+    
+
+ CustumerComponent
+
         CustumerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
 
-    HttpClientModule,
+      HttpClientModule,
     FormsModule
+
   ],
   providers: [{provide: APP_BASE_HREF, useValue: '/my/app'}],
   bootstrap: [AppComponent]
