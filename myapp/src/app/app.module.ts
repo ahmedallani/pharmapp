@@ -9,6 +9,10 @@ import { LoginComponent } from './login/login.component';
 import { MemberComponent } from './member/member.component';
 
 
+import { CustumerComponent } from './custumer/custumer.component';
+import {HttpClientModule} from '@angular/common/http';
+import {FormsModule} from '@angular/forms'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,11 +20,19 @@ import { MemberComponent } from './member/member.component';
     LoginComponent,
     MemberComponent,
     
+
+    CustumerComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+
   
+
+    HttpClientModule,
+    FormsModule
+
   ],
   providers: [{provide: APP_BASE_HREF, useValue: '/my/app'}],
   bootstrap: [AppComponent]

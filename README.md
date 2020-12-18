@@ -1,8 +1,5 @@
 # pharmapp
-
-# pharmapp
-
-Team
+Team 
 Product Owner: ghofrane messaoudi
 Scrum Master: nouha jbeli
 Development Team Members: marwen khorchani, mejdi kouira
@@ -12,6 +9,7 @@ git - Installation guide .
 node.js - Download page .
 npm - comes with node or download yarn - Download page .
 mongodb - Download page .
+
 
 Credits
 The MEAN name was coined by Valeri Karpov.
@@ -30,7 +28,7 @@ The boilerplate comes pre-bundled with a package.json and bower.json files that 
 
 To install the dependencies, run this in the application folder from the command-line:
 
-$ npm install
+$ npm install 
 This command does a few things:
 
 First it will install the dependencies needed for the application to run.
