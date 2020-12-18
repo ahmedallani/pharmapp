@@ -22,10 +22,9 @@ router.route("/").post(function (req, res) {
   createone(req.body, function (err, data) {
     console.log(req.body);
     if (err) {
-      console.log(err);
-      res.json("hello oussema");
+      res.json(err);
     } else {
-      res.send(data);
+      res.json(data);
     }
   });
 });
@@ -34,7 +33,7 @@ router.route("/:_id").delete(function (req, res) {
     console.log(req.params._id);
     if (err) {
       console.log(err);
-      res.json("hello oussema");
+      res.json(err);
     } else {
       res.send(data);
     }
@@ -45,7 +44,7 @@ router.route("/").put(function (req, res) {
   updatecustumer(req.body, function (err, data) {
     if (err) {
       console.log(err);
-      res.json("hello oussema");
+      res.json(err);
     } else {
       res.send(data);
     }
