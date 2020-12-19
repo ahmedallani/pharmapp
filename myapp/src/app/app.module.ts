@@ -11,7 +11,7 @@ import { MemberComponent } from './member/member.component';
 
 import { CustumerComponent } from './custumer/custumer.component';
 import {HttpClientModule} from '@angular/common/http';
-import {FormsModule} from '@angular/forms'
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import {FormsModule} from '@angular/forms'
     NavbarComponent,
     LoginComponent,
     MemberComponent,
-        CustumerComponent
+        CustumerComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +28,7 @@ import {FormsModule} from '@angular/forms'
     HttpClientModule,
     FormsModule
   ],
-  providers: [{provide: APP_BASE_HREF, useValue: '/my/app'}],
+  providers: [{provide: APP_BASE_HREF, useValue: ''}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

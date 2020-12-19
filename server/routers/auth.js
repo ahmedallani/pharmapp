@@ -8,11 +8,11 @@ const localStrategy = require("passport-local").Strategy;
 router.route("/login").post(function (req, res, next) {
   passport.authenticate("local", (err, user, info) => {
     if (err) throw err;
-    if (!user) res.send("No User Exists");
+    if (!user) res.send(err);
     else {
       req.logIn(user, (err) => {
         if (err) throw err;
-        res.send("Successfully Authenticated");
+        res.send(req.user);
         console.log(req.user);
       });
     }
@@ -33,7 +33,7 @@ router.route("/register").post(function (req, res) {
         attempt: false
       });
       await newUser.save();
-      res.send("User Created");
+      res.send(req.body);
     }
   });
 });
