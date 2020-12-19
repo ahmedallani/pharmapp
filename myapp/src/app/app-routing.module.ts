@@ -4,12 +4,14 @@ import { LoginComponent } from './login/login.component';
 import { CustumerComponent } from './custumer/custumer.component';
 import { ProductComponent } from './product/product.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { MemberComponent } from './member/member.component';
 
 const routes: Routes = [
   {path:'login' , component:LoginComponent},
   {path:'custumer', component:CustumerComponent},
   {path:'product' , component:ProductComponent},
-  {path:'Navbar' , component:NavbarComponent},
+  {path:'navbar' , component:NavbarComponent},
+  {path: 'member', component:MemberComponent},
 
 
 
