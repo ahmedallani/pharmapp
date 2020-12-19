@@ -6,13 +6,16 @@ import { MemberComponent } from './member/member.component';
 import { CustumerComponent } from './custumer/custumer.component';
 import { ProductComponent } from './product/product.component';
 import { NavbarComponent } from './navbar/navbar.component';
+
 import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
+  // { path: '/',redirectTo: '/login' },
   {path:'login' , component:LoginComponent},
   {path:'custumer', component:CustumerComponent},
   {path:'product' , component:ProductComponent},
   {path:'navbar' , component:NavbarComponent},
+
   {path:'member', component: MemberComponent},
   {path:'register', component:RegisterComponent},
 ];
@@ -25,5 +28,6 @@ const routes: Routes = [
 
 })
 export class AppRoutingModule { }
+
 
 export const routingComponents = [LoginComponent,CustumerComponent,ProductComponent,MemberComponent,RegisterComponent,NavbarComponent]
