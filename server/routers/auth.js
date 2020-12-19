@@ -12,7 +12,7 @@ router.route("/login").post(function (req, res, next) {
     else {
       req.logIn(user, (err) => {
         if (err) throw err;
-        res.send("Successfully Authenticated");
+        res.send(req.user);
         console.log(req.user);
       });
     }
@@ -33,7 +33,7 @@ router.route("/register").post(function (req, res) {
         attempt: false
       });
       await newUser.save();
-      res.send("User Created");
+      res.send(req.body);
     }
   });
 });

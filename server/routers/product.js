@@ -5,7 +5,7 @@ var {
   update,
   deleteproduct
 } = require("../../DB/controler/productControle.js");
-const multer=require('multer')
+
 var router = express.Router();
 
 router.route("/").get(function (req, res) {
