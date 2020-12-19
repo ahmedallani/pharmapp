@@ -14,7 +14,10 @@ const cookieParser = require("cookie-parser");
 const session = require("express-session");
 const bill = require("./routers/bill.js");
 const stat = require("./routers/stat.js");
+const multer = require('multer');
+const upload = multer({dest:'images/'});
 var app = express();
+
 
 mongoose.connect(
   "mongodb+srv://nouha:nouha123@cluster0.swnxc.mongodb.net/pharm-app",
@@ -75,6 +78,8 @@ app.use("/api/custumer", custumer);
 app.use("/api/stat", stat);
 
 app.use("/api/bill", bill);
+
 app.listen(8000, function () {
   console.log("listening on port 8000");
 });
+module.exports = upload;
