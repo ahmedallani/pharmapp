@@ -1,17 +1,21 @@
 var mongoose = require("mongoose");
 
 const productSchema = mongoose.Schema({
-  id: {
+ 
+  id:{
     type: String,
     unique: true
   },
-  name: String,
-  categorie: { type: mongoose.Schema.Types.ObjectId, ref: "categorie" },
+  name:String,
+  price:Number,
+  discount:Number,
+  PricewithDiscount:Number,
+  DoesInMG:Number,
+  image:Number,
+  // category:{ type: mongoose.Schema.Types.ObjectId, ref: "categorie" },
+  categoryid:String,
   brand: { type: mongoose.Schema.Types.ObjectId, ref: "brand" },
-  price: Number,
-  quantity: Number,
-  image: String,
-  description: String
+  description:Number,
 });
 
 const Modelproduct = mongoose.model("product", productSchema);

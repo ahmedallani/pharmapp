@@ -36,10 +36,13 @@
 
 </div>
 <br />
-<button class='btn' (click)="postCustumer()" type="button">ADD Custumer</button>
+<button class='btn' *ngIf="!myCondition" (click)="postCustumer()" type="button">ADD Custumer</button>
+<button class='btn'  *ngIf='myCondition' (click)='updatemyCustumer()' type="button">UPDATE Custumer</button>
+
 </form>
 <br />
-<table class='table table-success'>
+
+<table >
   <thead>
     <tr>
       <th>id</th>
@@ -49,6 +52,7 @@
       <th>Phone</th>
       <th>Email</th>
       <th>Points</th>
+      <th></th>
       <th></th>
 
     </tr>
@@ -65,6 +69,9 @@
        <td>
          <button (click)="deleteCustumer(item._id)">delete</button>
          </td>
+         <td>
+          <button (click)="editCustumer(item)">Update</button>
+          </td>
       <tr>
   </tbody>
 </table>
