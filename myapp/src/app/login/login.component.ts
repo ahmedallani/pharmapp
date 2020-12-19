@@ -14,13 +14,13 @@ export class LoginComponent implements OnInit {
   constructor(private router: Router, private service: LoginService) {}
 
   onlogin() {
-    console.log(this.username);
     if (this.username.length == 0) {
       alert('email field can not be empty');
     } else if (this.password.length == 0) {
       alert('password can not be empty');
     } else {
       this.service.login(this.username, this.password).subscribe((res: any) => {
+        console.log(res);
         if (res.username !== null && res.role === "manager") {
           console.log(res);
 
