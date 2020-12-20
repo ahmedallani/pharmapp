@@ -4,7 +4,7 @@ var {
   createone,
   findAll,
   updatebill
-} = require("../../DB/controler/billcontrole.js");
+} = require("../../DB/controler/billControle.js");
 
 var router = express.Router();
 
