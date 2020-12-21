@@ -1,0 +1,9 @@
+server/routers/bill.js l7 controler/billControle.js not /controler/billcontrole.js
+src/app/login/login.component.html l177 extra div 
+package.json l24 duplicate bootstrap
+header and footer should be outside app-router
+don't send password in response
+why you have navbar page 
+website look relatedb to medical
+src/app/navbar/navbar.component.html l24 <a href="#" routerLink="/product"> not <a href="article.html">
+header should be dynamic render depend on user authentication

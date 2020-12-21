@@ -12,6 +12,7 @@ router.route("/login").post(function (req, res, next) {
     else {
       req.logIn(user, (err) => {
         if (err) throw err;
+        debugger
         res.send(req.user);
         console.log(req.user);
       });

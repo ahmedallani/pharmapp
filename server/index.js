@@ -24,6 +24,7 @@ mongoose.connect(
   },
   {useMongoClient: true}
 );
+
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*"); 
   res.header("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE"); 
@@ -35,6 +36,7 @@ mongoose.connection
   .on("error", (err) => console.log("Error", err));
 
 // app.use(express.static(__dirname + "/../client/dist"));
+
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -55,9 +57,17 @@ app.use(
 // );
 
 app.use(cookieParser("secretcode"));
+
+//debug
+app.use(function(req, res, next) {
+  debugger
+  next();
+});
 // Passport middleware
+
 app.use(passport.initialize());
 app.use(passport.session());
+
 require("./routers/passportConfig")(passport);
 
 app.use("/api/auth", auth);
